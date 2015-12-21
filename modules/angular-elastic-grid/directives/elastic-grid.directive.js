@@ -17,7 +17,7 @@ angular.module('angular-elastic-grid').directive('elasticGrid', [
       replace: true,
       scope:  {
         items: '=',
-        direction: '@',
+        direction: '=',
         inverse: '@',
         speed: '@',
         height: '@',

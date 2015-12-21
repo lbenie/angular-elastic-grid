@@ -14,7 +14,7 @@
     "bower/jquery-elastic-grid/js/jquery.elastislide.js",
     "bower/jquery-elastic-grid/js/jquery.hoverdir.js",
     "bower/jquery-elastic-grid/js/elastic_grid.encode.js",
-    "bower/jquery-elastic-grid/css/elastic_grid.css"
+    "bower/jquery-elastic-grid/css/elastic_grid.css",
     "dist/angular-elastic-grid.js",
     "dist/angular-elastic-grid.min.js"
   ],

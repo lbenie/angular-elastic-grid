@@ -44,7 +44,7 @@ angular.module('angular-elastic-grid').directive('elasticGrid', [
 
         element.elastic_grid({
           'hoverDirection': scope.direction,
-          'hoverDeay': scope.delay,
+          'hoverDelay': scope.delay,
           'hoverInverse': scope.inverse,
           'expandingSpeed': scope.speed,
           'expandingHeight': scope.height,

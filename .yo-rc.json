@@ -1,0 +1,31 @@
+{
+  "generator-angular-package": {
+    "props": {
+      "author": {
+        "name": "Lucien Bénié",
+        "email": "lucien.benie@gmail.com"
+      },
+      "yourModule": {
+        "original": "angular-elastic-grid",
+        "camelized": "angularElasticGrid",
+        "dasherized": "angular-elastic-grid",
+        "slugified": "angular-elastic-grid",
+        "parts": [
+          "angular",
+          "elastic",
+          "grid"
+        ]
+      },
+      "includeModuleDirectives": true,
+      "includeModuleFilters": false,
+      "includeModuleServices": false,
+      "includeModuleControllers": false,
+      "includeAngularModuleResource": false,
+      "includeAngularModuleCookies": false,
+      "includeAngularModuleSanitize": false,
+      "moduleDirectory": "modules/angular-elastic-grid",
+      "moduleUnitTestDirectory": "test/unit/angular-elastic-grid",
+      "moduleUnitE2eDirectory": "test/e2e/angular-elastic-grid"
+    }
+  }
+}

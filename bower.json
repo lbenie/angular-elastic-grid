@@ -1,6 +1,6 @@
 {
   "name": "angular-elastic-grid",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "authors": [
     {
       "name": "Lucien Bénié",
@@ -8,15 +8,14 @@
     }
   ],
   "main": [
-    "bower/jquery-elastic-grid/js/modernizr.custom.js",
-    "bower/jquery-elastic-grid/js/classie.js",
-    "bower/jquery-elastic-grid/js/elastic_grid.js",
-    "bower/jquery-elastic-grid/js/jquery.elastislide.js",
-    "bower/jquery-elastic-grid/js/jquery.hoverdir.js",
-    "bower/jquery-elastic-grid/js/elastic_grid.encode.js",
-    "bower/jquery-elastic-grid/css/elastic_grid.css",
-    "dist/angular-elastic-grid.js",
-    "dist/angular-elastic-grid.min.js"
+    "../jquery-elastic-grid/js/modernizr.custom.js",
+    "../jquery-elastic-grid/js/classie.js",
+    "../jquery-elastic-grid/js/elastic_grid.js",
+    "../jquery-elastic-grid/js/jquery.elastislide.js",
+    "../jquery-elastic-grid/js/jquery.hoverdir.js",
+    "../jquery-elastic-grid/js/elastic_grid.encode.js",
+    "../jquery-elastic-grid/css/elastic_grid.css",
+    "dist/angular-elastic-grid.js"
   ],
   "ignore": [
     "src",

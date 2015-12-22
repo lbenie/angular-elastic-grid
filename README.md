@@ -1,4 +1,4 @@
-## angular-elastic-grid [![Build Status](https://travis-ci.org/lbenie/angular-elastic-grid.svg?branch=master)](https://travis-ci.org/lbenie/angular-elastic-grid)
+## angular-elastic-grid [![Build Status](https://travis-ci.org/lbenie/angular-elastic-grid.svg?branch=master)](https://travis-ci.org/lbenie/angular-elastic-grid) [![devDependency Status](https://david-dm.org/lbenie/angular-elastic-grid/dev-status.svg)](https://david-dm.org/lbenie/angular-elastic-grid#info=devDependencies)
 
 ### Installation
 

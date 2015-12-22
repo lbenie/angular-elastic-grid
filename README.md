@@ -64,7 +64,7 @@ There are eight filter options for `elastic_grid.js`
           "large": ["https://pixabay.com/en/christmas-santa-claus-fig-993304/"],
           "button_list": [{"title": "Demo", "url": "http://#"}, {"title": "Download", "url": "http://#"}],
           "tags": ["Test"]
-        }]" filter="popup" direction="true" speed=500 height=500 delay=0 inverse="false"> </elastic-grid>
+        }]" filter="popup" direction=true speed=500 height=500 delay=0 inverse=false> </elastic-grid>
 ...
 ...
 ```
@@ -107,7 +107,7 @@ $ gulp build
 
 - To contribute with this awesome project, just open an issue, then fork the project and make a new branch to do your work.
 
-- Run `gulp build` before make your PR.
+- Run `gulp build` before making your PR.
 
 - [Changelog](https://github.com/lbenie/angular-elastic-grid/releases)
 

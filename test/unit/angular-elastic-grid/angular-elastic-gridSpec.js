@@ -1,6 +1,6 @@
 'use strict';
 
-describe('Component <elastic-grid> directive', function() {
+describe('', function() {
 
   var module;
   var dependencies;

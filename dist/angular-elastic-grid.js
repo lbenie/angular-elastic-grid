@@ -30,7 +30,7 @@
  */
 'use strict';
 angular.module('angular-elastic-grid').directive('elasticGrid', [
-  function() {
+  function($timeout) {
     // List of known option keys for elastic_grid according to jquery-elastic-grid.js docs:
     // http://demo.phapsu.com/jquery.elastic_grid/index.php
     var OPTION_FILTERS = [
@@ -49,35 +49,29 @@ angular.module('angular-elastic-grid').directive('elasticGrid', [
         speed: '@',
         height: '@',
         delay: '@',
-        filter: '@'
-      } ,
+        filter: '@',
+        timeout: '@'
+      },
       link: function postLink(scope, element, attrs) {
-        // Elastic grid directive logic
-        if(scope.direction === undefined) scope.direction = true;
-        if(scope.items === undefined) scope.items = [{
-          'title': 'Title 1',
-          'description': 'This is a description.',
-          'thumbnail': ['https://pixabay.com/en/boy-child-fun-beach-sea-colors-958457/'],
-          'large': ['https://pixabay.com/en/christmas-santa-claus-fig-993304/'],
-          'button_list': [{'title': 'Demo', 'url': 'http://#'}, {'title': 'Download', 'url': 'http://#'}],
-          'tags': ['Test']
-        }];
-
-        if (scope.inverse === undefined) scope.inverse = false;
-        if (scope.speed === undefined) scope.speed = 500;
-        if (scope.height === undefined) scope.height = 500;
-        if (scope.delay === undefined) scope.delay = 0;
-        if (scope.filter === undefined) scope.filter = 'none';
-
-        element.elastic_grid({
-          'hoverDirection': scope.direction,
-          'hoverDelay': scope.delay,
-          'hoverInverse': scope.inverse,
-          'expandingSpeed': scope.speed,
-          'expandingHeight': scope.height,
-          'filterEffect': scope.filter,
-          'items': scope.items
-        });
+        $timeout(function() {
+          // Elastic grid directive logic
+         element.elastic_grid({
+            'hoverDirection': scope.direction || true,
+            'hoverDelay': scope.delay || 0,
+            'hoverInverse': scope.inverse || false,
+            'expandingSpeed': scope.speed || 500,
+            'expandingHeight': scope.height || 500,
+            'filterEffect': scope.filter || 'none',
+            'items': scope.items || [{
+              'title': 'Title 1',
+              'description': 'This is a description.',
+              'thumbnail': ['https://pixabay.com/en/boy-child-fun-beach-sea-colors-958457/'],
+              'large': ['https://pixabay.com/en/christmas-santa-claus-fig-993304/'],
+              'button_list': [{'title': 'Demo', 'url': 'http://#'}, {'title': 'Download', 'url': 'http://#'}],
+              'tags': ['Test']
+            }]
+          });
+        }, scope.timeout || 100);
       }
     };
   }

@@ -2,7 +2,7 @@
  * Created by coichedid on 21/04/15.
  */
 'use strict';
-angular.module('angular-elastic-grid').directive('elasticGrid', [
+angular.module('angular-elastic-grid').directive('elasticGrid',
   function($timeout) {
     // List of known option keys for elastic_grid according to jquery-elastic-grid.js docs:
     // http://demo.phapsu.com/jquery.elastic_grid/index.php
@@ -48,4 +48,4 @@ angular.module('angular-elastic-grid').directive('elasticGrid', [
       }
     };
   }
-]);
+);

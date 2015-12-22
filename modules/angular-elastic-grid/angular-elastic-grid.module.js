@@ -11,12 +11,12 @@
       });
 
   // Modules
-  
+
   angular.module('angular-elastic-grid.directives', []);
-  
-  
-  
-  
+
+
+
+
   angular.module('angular-elastic-grid',
       [
         'angular-elastic-grid.config',

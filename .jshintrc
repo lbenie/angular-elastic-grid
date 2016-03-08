@@ -56,6 +56,19 @@
 
   "globals": {
     "angular": false,
-    "$": false
+    "$": false,
+    "jQuery": true,
+    "console": true,
+    "_": true,
+    "moment": true,
+    "describe": true,
+    "beforeEach": true,
+    "module": true,
+    "inject": true,
+    "it": true,
+    "expect": true,
+    "browser": true,
+    "element": true,
+    "by": true
   }
 }

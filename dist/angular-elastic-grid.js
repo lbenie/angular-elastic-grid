@@ -1,3 +1,10 @@
+/**
+ * @name angular-elastic-grid
+ * @version 1.0.5
+ * @author Build by Lucien Bénié lucien.benie@gmail.com
+ * @license MIT
+ * Built on 10/03/2016
+ */
 (function (angular) {
 
   // Create all modules and define dependencies to make sure they exist
@@ -25,9 +32,6 @@
 
 })(angular);
 
-/**
- * Created by coichedid on 21/04/15.
- */
 'use strict';
 angular.module('angular-elastic-grid').directive('elasticGrid',
   function() {
@@ -62,7 +66,10 @@ angular.module('angular-elastic-grid').directive('elasticGrid',
               'hoverInverse': scope.inverse || false,
               'expandingSpeed': scope.speed || 500,
               'expandingHeight': scope.height || 500,
-              'filterEffect': OPTION_FILTERS[scope.filter] || OPTION_FILTERS.none,
+              'filterEffect': function() {
+                if (OPTION_FILTERS.indexOf(scope.filter) > -1) { return scope.filter; }
+                return OPTION_FILTERS.none;
+              },
               'items': newValue || [{
                 'title': 'Title 1',
                 'description': 'This is a description.',

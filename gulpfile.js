@@ -1,12 +1,9 @@
 var gulp = require('gulp');
 var Karma = require('karma').Server;
-var concat = require('gulp-concat');
-var uglify = require('gulp-uglify');
-var rename = require('gulp-rename');
 var path = require('path');
-var plumber = require('gulp-plumber');
 var runSequence = require('run-sequence');
-var jshint = require('gulp-jshint');
+var $ = require('gulp-load-plugins')();
+var pkg = require(path.resolve('package.json'));
 
 /**
  * File patterns
@@ -19,13 +16,27 @@ var rootDirectory = path.resolve('./');
 var sourceDirectory = path.join(rootDirectory, './modules');
 
 var sourceFiles = [
-
   // Make sure module files are handled first
   path.join(sourceDirectory, '/**/*.module.js'),
 
   // Then add all JavaScript files
   path.join(sourceDirectory, '/**/*.js')
 ];
+
+var today = new Date();
+var month = (today.getMonth() + 1) < '10' ? '0' + (today.getMonth() + 1) : (today.getMonth() + 1);
+today = today.getDate() + '/' + month + '/' + today.getFullYear();
+
+var banner = [
+  '/**',
+  ' * @name <%= pkg.name %>',
+  ' * @version <%= pkg.version %>',
+  ' * @author Build by <%= pkg.author.name %> <%= pkg.author.email %>',
+  ' * @license <%= pkg.license %>',
+  ' * Built on ' + today,
+  ' */',
+  ''
+].join('\n');
 
 var lintFiles = [
   'gulpfile.js',
@@ -35,11 +46,13 @@ var lintFiles = [
 
 gulp.task('build', function() {
   gulp.src(sourceFiles)
-    .pipe(plumber())
-    .pipe(concat('angular-elastic-grid.js'))
+    .pipe($.plumber())
+    .pipe($.concat('angular-elastic-grid.js'))
+    .pipe($.header(banner, {pkg: pkg}))
     .pipe(gulp.dest('./dist/'))
-    .pipe(uglify())
-    .pipe(rename('angular-elastic-grid.min.js'))
+    .pipe($.uglify())
+    .pipe($.rename('angular-elastic-grid.min.js'))
+    .pipe($.header(banner, {pkg: pkg}))
     .pipe(gulp.dest('./dist'));
 });
 
@@ -64,10 +77,10 @@ gulp.task('watch', function () {
  */
 gulp.task('jshint', function () {
   return gulp.src(lintFiles)
-    .pipe(plumber())
-    .pipe(jshint())
-    .pipe(jshint.reporter('jshint-stylish'))
-    .pipe(jshint.reporter('fail'));
+    .pipe($.plumber())
+    .pipe($.jshint())
+    .pipe($.jshint.reporter('jshint-stylish'))
+    .pipe($.jshint.reporter('fail'));
 });
 
 /**

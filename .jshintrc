@@ -56,7 +56,7 @@
 
   "globals": {
     "angular": false,
-    "$": false,
+    "$": true,
     "jQuery": true,
     "console": true,
     "_": true,

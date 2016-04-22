@@ -1,9 +1,9 @@
 /**
  * @name angular-elastic-grid
- * @version 1.0.5
+ * @version 1.0.6
  * @author Build by Lucien Bénié lucien.benie@gmail.com
  * @license MIT
- * Built on 10/03/2016
+ * Built on 21/04/2016
  */
 (function (angular) {
 
@@ -39,14 +39,14 @@ angular.module('angular-elastic-grid').directive('elasticGrid',
     // http://demo.phapsu.com/jquery.elastic_grid/index.php
     var OPTION_FILTERS = [
       'popup', 'none', 'moveup', 'scaleup',
-      'fallperspective', 'helix', 'fly', 'flip',
+      'fallperspective', 'helix', 'fly', 'flip'
     ];
 
     return {
       template: '<div></div>',
       restrict: 'EA',
       replace: true,
-      scope:  {
+      scope: {
         items: '=',
         direction: '=',
         inverse: '@',
@@ -58,28 +58,30 @@ angular.module('angular-elastic-grid').directive('elasticGrid',
       link: function postLink(scope, element, attrs) {
         scope.$watch(function(scope) {
           return scope.items;
-        }, function (newValue) {
+        }, function(newValue) {
           // Elastic grid directive logic
           element.elastic_grid({
-              'hoverDirection': scope.direction || true,
-              'hoverDelay': scope.delay || 0,
-              'hoverInverse': scope.inverse || false,
-              'expandingSpeed': scope.speed || 500,
-              'expandingHeight': scope.height || 500,
-              'filterEffect': function() {
-                if (OPTION_FILTERS.indexOf(scope.filter) > -1) { return scope.filter; }
-                return OPTION_FILTERS.none;
-              },
-              'items': newValue || [{
-                'title': 'Title 1',
-                'description': 'This is a description.',
-                'thumbnail': ['http://www.joomlaworks.net/images/demos/galleries/abstract/7.jpg'],
-                'large': ['http://www.joomlaworks.net/images/demos/galleries/abstract/7.jpg'],
-                'button_list': [{'title': 'Demo', 'url': 'http://#', 'new_window': '_blank'},
-                {'title': 'Download', 'url': 'http://#', 'new_window': '_blank'}],
-                'tags': ['Test']
-              }]
-            });
+            hoverDirection: scope.direction || true,
+            hoverDelay: scope.delay || 0,
+            hoverInverse: scope.inverse || false,
+            expandingSpeed: scope.speed || 500,
+            expandingHeight: scope.height || 500,
+            filterEffect: function() {
+              if (OPTION_FILTERS.indexOf(scope.filter) > -1 && angular.isDefined(scope.filter)) { return scope.filter; }
+
+              return OPTION_FILTERS[OPTION_FILTERS.indexOf('none')];
+            }(),
+
+            items: newValue || [{
+              title: 'Title 1',
+              description: 'This is a description.',
+              thumbnail: ['http://placehold.it/350x150'],
+              large: ['http://placehold.it/450x350'],
+              button_list: [{ title: 'Demo', url: 'http://#', new_window: '_blank' },
+              { title: 'Download', url: 'http://#', new_window: '_blank' }],
+              tags: ['Test']
+            }]
+          });
         });
       }
     };

@@ -1,6 +1,6 @@
 {
   "name": "angular-elastic-grid",
-  "version": "1.0.4",
+  "version": "1.0.6",
   "authors": [
     {
       "name": "Lucien Bénié",
@@ -28,8 +28,22 @@
     "jquery-elastic-grid": "vukhanhtruong/jquery-elastic-grid"
   },
   "devDependencies": {
-    "angular-mocks": ">=1.2.0",
-    "angular-scenario": ">=1.2.0",
-    "angular": ">=1.2.0"
+    "angular-mocks": ">=1.5.5",
+    "angular-scenario": ">=1.5.5",
+    "angular": ">=1.5.5",
+    "jquery": "^2.2.3"
+  },
+  "overrides": {
+    "jquery-elastic-grid": {
+      "main": [
+        "js/modernizr.custom.js",
+        "js/classie.js",
+        "js/elastic_grid.js",
+        "js/jquery.elastislide.js",
+        "js/jquery.hoverdir.js",
+        "js/elastic_grid.encode.js",
+        "css/elastic_grid.css"
+      ]
+    }
   }
 }

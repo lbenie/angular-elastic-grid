@@ -1,5 +1,14 @@
 # Change Log
 
+## [v.1.0.7](https://github.com/lbenie/angular-elastic-grid/tree/v.1.0.7) (2016-04-22)
+[Full Changelog](https://github.com/lbenie/angular-elastic-grid/compare/v.1.0.6...v.1.0.7)
+
+## [v.1.0.6](https://github.com/lbenie/angular-elastic-grid/tree/v.1.0.6) (2016-04-22)
+[Full Changelog](https://github.com/lbenie/angular-elastic-grid/compare/v1.0.6-beta.1...v.1.0.6)
+
+## [v1.0.6-beta.1](https://github.com/lbenie/angular-elastic-grid/tree/v1.0.6-beta.1) (2016-04-22)
+[Full Changelog](https://github.com/lbenie/angular-elastic-grid/compare/v1.0.5...v1.0.6-beta.1)
+
 ## [v1.0.5](https://github.com/lbenie/angular-elastic-grid/tree/v1.0.5) (2016-03-08)
 [Full Changelog](https://github.com/lbenie/angular-elastic-grid/compare/v1.0.4...v1.0.5)
 

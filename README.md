@@ -1,6 +1,9 @@
 # angular-elastic-grid
 
-[![Build Status](https://travis-ci.org/lbenie/angular-elastic-grid.svg?branch=master)](https://travis-ci.org/lbenie/angular-elastic-grid) [![devDependency Status](https://david-dm.org/lbenie/angular-elastic-grid/dev-status.svg)](https://david-dm.org/lbenie/angular-elastic-grid#info=devDependencies) [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/) [![npm version](https://badge.fury.io/js/angular-elastic-grid.svg)](https://badge.fury.io/js/angular-elastic-grid) [![Bower version](https://badge.fury.io/bo/angular-elastic-grid.svg)](https://badge.fury.io/bo/angular-elastic-grid)
+[![Build Status](https://travis-ci.org/lbenie/angular-elastic-grid.svg?branch=master)](https://travis-ci.org/lbenie/angular-elastic-grid) [![devDependency Status](https://david-dm.org/lbenie/angular-elastic-grid/dev-status.svg)](https://david-dm.org/lbenie/angular-elastic-grid#info=devDependencies) [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/) [![version](https://img.shields.io/npm/v/angular-elastic-grid.svg)](https://www.npmjs.org/package/angular-elastic-grid)
+[![bower](https://img.shields.io/bower/v/angular-elastic-grid.svg)](https://badge.fury.io/bo/angular-elastic-grid) ![node](https://img.shields.io/node/v/angular-elastic-grid.svg)
+
+
 
 ## Installation
 

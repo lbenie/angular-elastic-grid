@@ -1,6 +1,6 @@
 /**
  * @name angular-elastic-grid
- * @version 1.0.6
+ * @version 1.0.7
  * @author Build by Lucien Bénié lucien.benie@gmail.com
  * @license MIT
  * Built on 21/04/2016

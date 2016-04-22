@@ -63,17 +63,85 @@ There are eight filter options for `elastic_grid.js`
 -   `fly`
 -   `flip`
 
+items must be an array.
+filter uses the 'none' filter if no filter is defined.
+
+Optionals: direction, speed, height, delay and inverse.
+
 ```html
+<div elastic-grid>
+</div>
 ...
+or
+...
+<elastic-grid></elastic-grid>
+...
+or
 ...
 <elastic-grid items="[{
   title: 'Title 1',
   description: 'This is a description.',
   thumbnail: ['http://placehold.it/350x150'],
-  large: ['http://placehold.it/450x350'],
-  button_list: [{ title: 'Demo', url: 'http://#', new_window: '_blank' },
-  { title: 'Download', url: 'http://#', new_window: '_blank' }],
+  large: ['http://placehold.it/450x350', 'http://placehold.it/450x350', 'http://placehold.it/450x350'],
+  button_list: [
+    { title: 'Demo', url: 'http://placehold.it/450x350'},
+    { title: 'Download', url: 'http://placehold.it/450x350'}
+  ],
   tags: ['Test']
+}, {
+  title: 'Title 2',
+  description: 'This is a description.',
+  thumbnail: ['http://placehold.it/350x150'],
+  large: ['http://placehold.it/450x350', 'http://placehold.it/450x350', 'http://placehold.it/450x350'],
+  button_list: [
+    { title: 'Demo', url: 'http://placehold.it/450x350'},
+    { title: 'Download', url: 'http://placehold.it/450x350'}
+  ],
+  tags: ['Test, Title2']
+}, {
+  title: 'Title 3',
+  description: 'This is a description.',
+  thumbnail: ['http://placehold.it/350x150'],
+  large: ['http://placehold.it/450x350', 'http://placehold.it/450x350', 'http://placehold.it/450x350'],
+  button_list: [
+    { title: 'Demo', url: 'http://placehold.it/450x350'},
+    { title: 'Download', url: 'http://placehold.it/450x350'}
+  ],
+  tags: ['Test, Title1']
+}]" filter="popup"></elastic-grid>
+...
+or
+...
+<elastic-grid items="[{
+  title: 'Title 1',
+  description: 'This is a description.',
+  thumbnail: ['http://placehold.it/350x150'],
+  large: ['http://placehold.it/450x350', 'http://placehold.it/450x350', 'http://placehold.it/450x350'],
+  button_list: [
+    { title: 'Demo', url: 'http://placehold.it/450x350'},
+    { title: 'Download', url: 'http://placehold.it/450x350'}
+  ],
+  tags: ['Test']
+}, {
+  title: 'Title 2',
+  description: 'This is a description.',
+  thumbnail: ['http://placehold.it/350x150'],
+  large: ['http://placehold.it/450x350', 'http://placehold.it/450x350', 'http://placehold.it/450x350'],
+  button_list: [
+    { title: 'Demo', url: 'http://placehold.it/450x350'},
+    { title: 'Download', url: 'http://placehold.it/450x350'}
+  ],
+  tags: ['Test, Title2']
+}, {
+  title: 'Title 3',
+  description: 'This is a description.',
+  thumbnail: ['http://placehold.it/350x150'],
+  large: ['http://placehold.it/450x350', 'http://placehold.it/450x350', 'http://placehold.it/450x350'],
+  button_list: [
+    { title: 'Demo', url: 'http://placehold.it/450x350'},
+    { title: 'Download', url: 'http://placehold.it/450x350'}
+  ],
+  tags: ['Test, Title1']
 }]" filter="popup" direction=true speed=500 height=500 delay=0 inverse=false> </elastic-grid>
 ...
 ...

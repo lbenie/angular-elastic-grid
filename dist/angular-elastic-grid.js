@@ -37,10 +37,7 @@ angular.module('angular-elastic-grid').directive('elasticGrid',
   function() {
     // List of known option keys for elastic_grid according to jquery-elastic-grid.js docs:
     // http://demo.phapsu.com/jquery.elastic_grid/index.php
-    var OPTION_FILTERS = [
-      'popup', 'none', 'moveup', 'scaleup',
-      'fallperspective', 'helix', 'fly', 'flip'
-    ];
+    var OPTION_FILTERS = ['popup', 'none', 'moveup', 'scaleup', 'fallperspective', 'helix', 'fly', 'flip'];
 
     return {
       template: '<div></div>',
@@ -48,7 +45,7 @@ angular.module('angular-elastic-grid').directive('elasticGrid',
       replace: true,
       scope: {
         items: '=',
-        direction: '=',
+        direction: '@',
         inverse: '@',
         speed: '@',
         height: '@',
@@ -67,8 +64,7 @@ angular.module('angular-elastic-grid').directive('elasticGrid',
             expandingSpeed: scope.speed || 500,
             expandingHeight: scope.height || 500,
             filterEffect: function() {
-              if (OPTION_FILTERS.indexOf(scope.filter) > -1 && angular.isDefined(scope.filter)) { return scope.filter; }
-
+              if (OPTION_FILTERS.indexOf(scope.filter) > -1) { return scope.filter; }
               return OPTION_FILTERS[OPTION_FILTERS.indexOf('none')];
             }(),
 
@@ -76,10 +72,32 @@ angular.module('angular-elastic-grid').directive('elasticGrid',
               title: 'Title 1',
               description: 'This is a description.',
               thumbnail: ['http://placehold.it/350x150'],
-              large: ['http://placehold.it/450x350'],
-              button_list: [{ title: 'Demo', url: 'http://#', new_window: '_blank' },
-              { title: 'Download', url: 'http://#', new_window: '_blank' }],
+              large: ['http://placehold.it/450x350', 'http://placehold.it/450x350', 'http://placehold.it/450x350'],
+              button_list: [
+                { title: 'Demo', url: 'http://placehold.it/450x350'},
+                { title: 'Download', url: 'http://placehold.it/450x350'}
+              ],
               tags: ['Test']
+            }, {
+              title: 'Title 2',
+              description: 'This is a description.',
+              thumbnail: ['http://placehold.it/350x150'],
+              large: ['http://placehold.it/450x350', 'http://placehold.it/450x350', 'http://placehold.it/450x350'],
+              button_list: [
+                { title: 'Demo', url: 'http://placehold.it/450x350'},
+                { title: 'Download', url: 'http://placehold.it/450x350'}
+              ],
+              tags: ['Test, Title2']
+            }, {
+              title: 'Title 3',
+              description: 'This is a description.',
+              thumbnail: ['http://placehold.it/350x150'],
+              large: ['http://placehold.it/450x350', 'http://placehold.it/450x350', 'http://placehold.it/450x350'],
+              button_list: [
+                { title: 'Demo', url: 'http://placehold.it/450x350'},
+                { title: 'Download', url: 'http://placehold.it/450x350'}
+              ],
+              tags: ['Test, Title1']
             }]
           });
         });

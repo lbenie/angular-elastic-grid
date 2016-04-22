@@ -64,13 +64,14 @@ There are eight filter options for `elastic_grid.js`
 ...
 ...
 <elastic-grid items="[{
-          "title": "Title 1",
-          "description": "This is a description.",
-          "thumbnail": ["https://pixabay.com/en/boy-child-fun-beach-sea-colors-958457/"],
-          "large": ["https://pixabay.com/en/christmas-santa-claus-fig-993304/"],
-          "button_list": [{"title": "Demo", "url": "http://#"}, {"title": "Download", "url": "http://#"}],
-          "tags": ["Test"]
-        }]" filter="popup" direction=true speed=500 height=500 delay=0 inverse=false> </elastic-grid>
+  title: 'Title 1',
+  description: 'This is a description.',
+  thumbnail: ['http://placehold.it/350x150'],
+  large: ['http://placehold.it/450x350'],
+  button_list: [{ title: 'Demo', url: 'http://#', new_window: '_blank' },
+  { title: 'Download', url: 'http://#', new_window: '_blank' }],
+  tags: ['Test']
+}]" filter="popup" direction=true speed=500 height=500 delay=0 inverse=false> </elastic-grid>
 ...
 ...
 ```

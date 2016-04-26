@@ -22,11 +22,11 @@
     "src",
     "test",
     "Gruntfile.js",
+    "gulpfile.js",
     "**/.*"
   ],
   "dependencies": {
-    "jquery-elastic-grid": "vukhanhtruong/jquery-elastic-grid",
-    "angular-elastic-grid": "^1.0.5"
+    "jquery-elastic-grid": "vukhanhtruong/jquery-elastic-grid"
   },
   "devDependencies": {
     "angular-mocks": ">=1.5.5",

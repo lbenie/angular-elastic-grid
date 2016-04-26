@@ -16,7 +16,7 @@
     "../jquery-elastic-grid/js/elastic_grid.encode.js",
     "../jquery-elastic-grid/css/elastic_grid.css",
     "dist/angular-elastic-grid.js",
-    "dist/style.css"
+    "dist/angular-elastic-grid.css"
   ],
   "ignore": [
     "src",

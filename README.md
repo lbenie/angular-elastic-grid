@@ -4,8 +4,6 @@
 [![GitHub release](https://img.shields.io/github/release/lbenie/angular-elastic-grid.svg?maxAge=2592000)](https://github.com/lbenie/angular-elastic-grid/releases/)
 ![node](https://img.shields.io/node/v/angular-elastic-grid.svg) [![license](https://img.shields.io/github/license/lbenie/angular-elastic-grid.svg?maxAge=2592000)](https://github.com/lbenie/angular-elastic-grid/blob/master/LICENSE)
 
-
-
 ## Installation
 
 install `angular-elastic-grid` by bower or npm running the following command

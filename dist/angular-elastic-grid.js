@@ -1,9 +1,9 @@
 /**
  * @name angular-elastic-grid
- * @version 1.0.7
+ * @version 1.0.8
  * @author Build by Lucien Bénié lucien.benie@gmail.com
  * @license MIT
- * Built on 21/04/2016
+ * Built on 26/04/2016
  */
 (function (angular) {
 
@@ -37,7 +37,7 @@ angular.module('angular-elastic-grid').directive('elasticGrid',
   function() {
     // List of known option keys for elastic_grid according to jquery-elastic-grid.js docs:
     // http://demo.phapsu.com/jquery.elastic_grid/index.php
-    var OPTION_FILTERS = ['popup', 'none', 'moveup', 'scaleup', 'fallperspective', 'helix', 'fly', 'flip'];
+    var FILTERS = ['popup', 'none', 'moveup', 'scaleup', 'fallperspective', 'helix', 'fly', 'flip'];
 
     return {
       template: '<div></div>',
@@ -64,8 +64,9 @@ angular.module('angular-elastic-grid').directive('elasticGrid',
             expandingSpeed: scope.speed || 500,
             expandingHeight: scope.height || 500,
             filterEffect: function() {
-              if (OPTION_FILTERS.indexOf(scope.filter) > -1) { return scope.filter; }
-              return OPTION_FILTERS[OPTION_FILTERS.indexOf('none')];
+              return FILTERS.indexOf(scope.filter) > -1 ?
+                    scope.filter :
+                    FILTERS[FILTERS.indexOf('none')];
             }(),
 
             items: newValue || [{

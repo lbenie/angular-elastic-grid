@@ -31,7 +31,7 @@
     "karma-phantomjs-launcher": "^1.0.0",
     "karma-sinon-chai": "^1.2.0",
     "karma-spec-reporter": "^0.0.31",
-    "lolex": "^1.4.0",
+    "lolex": "^2.2.0",
     "mocha": "^3.0.2",
     "phantomjs": "^2.1.7",
     "phantomjs-prebuilt": "^2.1.7",

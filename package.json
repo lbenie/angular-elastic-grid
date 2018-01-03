@@ -35,7 +35,7 @@
     "mocha": "^3.0.2",
     "phantomjs": "^2.1.7",
     "phantomjs-prebuilt": "^2.1.7",
-    "run-sequence": "^1.1.5",
+    "run-sequence": "^2.2.1",
     "sinon": "^2.0.0",
     "sinon-chai": "^2.8.0"
   },
